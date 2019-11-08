@@ -40,8 +40,16 @@ print('------------------------------------------------ Logical errors')
 
 print('------------------------------------------------ Try and except statements')
 
+# while True
 try:
     age = int(input("Please enter your age: "))
     print("I see that you are %d years old." % age)
 except ValueError:
     print("Hey, that wasn't a number!")
+
+try:
+    dividend = int(input("Please enter the dividend: "))
+    divisor = int(input("Please enter the divisor: "))
+    print("%d / %d = %f" % (dividend, divisor, dividend/divisor))
+except(ValueError, ZeroDivisionError):
+    print("Oops, something went wrong!")
