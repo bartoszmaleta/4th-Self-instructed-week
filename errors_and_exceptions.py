@@ -39,7 +39,7 @@ print('------------------------------------------------ Logical errors')
 # off-by-one, and other numerical errors
 
 
-# Code works, COMMENTED JUST TO RUN THE NEWEST CODE FASTER!
+# Code works, COMMENTED JUST TO RUN THE NEWEST CODE FASTER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 # print('------------------------------------------------ Try and except statements')

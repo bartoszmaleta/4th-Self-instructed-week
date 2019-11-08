@@ -1,0 +1,23 @@
+ERROR:root:The washing machine is leaking!
+CRITICAL:root:The house is on fire!
+ERROR:root:invalid literal for int() with base 10: 'sa'
+Traceback (most recent call last):
+  File "/home/acer/Documents/4th-Self-instructed-week/errors_and_exceptions_cd3.py", line 59, in <module>
+    age = int(input("How old are you? "))
+ValueError: invalid literal for int() with base 10: 'sa'
+ERROR:root:The washing machine is leaking!
+CRITICAL:root:The house is on fire!
+ERROR:root:The washing machine is leaking!
+CRITICAL:root:The house is on fire!
+ERROR:root:invalid literal for int() with base 10: 'as'
+Traceback (most recent call last):
+  File "/home/acer/Documents/4th-Self-instructed-week/errors_and_exceptions_cd3.py", line 59, in <module>
+    age = int(input("How old are you? "))
+ValueError: invalid literal for int() with base 10: 'as'
+ERROR:root:The washing machine is leaking!
+CRITICAL:root:The house is on fire!
+ERROR:root:invalid literal for int() with base 10: 'xzxz'
+Traceback (most recent call last):
+  File "/home/acer/Documents/4th-Self-instructed-week/errors_and_exceptions_cd3.py", line 59, in <module>
+    age = int(input("How old are you? "))
+ValueError: invalid literal for int() with base 10: 'xzxz'
