@@ -38,18 +38,113 @@ print('------------------------------------------------ Logical errors')
 # making a mistake in a boolean expression
 # off-by-one, and other numerical errors
 
-print('------------------------------------------------ Try and except statements')
 
-# while True
+# Code works, COMMENTED JUST TO RUN THE NEWEST CODE FASTER!
+
+
+# print('------------------------------------------------ Try and except statements')
+
+# # while True
+# try:
+#     age = int(input("Please enter your age: "))
+#     print("I see that you are %d years old." % age)
+# except ValueError:
+#     print("Hey, that wasn't a number!")
+
+
+# print('------------------------------------------------ Try and except statements')
+# try:
+#     dividend = int(input("Please enter the dividend: "))
+#     divisor = int(input("Please enter the divisor: "))
+#     print("%d / %d = %f" % (dividend, divisor, dividend/divisor))
+# except(ValueError, ZeroDivisionError):
+#     print("Oops, something went wrong!")
+
+
+# print('------------------------------------------------ Try and except statements')
+# try:
+#     dividend = int(input("Please enter the dividend: "))
+#     divisor = int(input("Please enter the divisor: "))
+#     print("%d / %d = %f" % (dividend, divisor, dividend/divisor))
+# except ValueError:
+#     print("The divisor and dividend have to be numbers!")
+# except ZeroDivisionError:
+#     print("The dividend may not be zero!")
+
+
+print('------------------------------------------------ Try and except statements')
+# Note that in the example above if a ValueError occurs we won’t know whether it was caused by the 
+# dividend or the divisor not being an integer – either one of the input lines could cause that error. 
+# If we want to give the user more specific feedback about which input was wrong, we will have to 
+# wrap each input line in a separate try-except block
+
+# try:
+#     dividend = int(input("Please enter the dividend: "))
+# except ValueError:
+#     print("The dividend has to be a number!")
+
+# try:
+#     divisor = int(input("Please enter the divisor: "))
+# except ValueError:
+#     print("The divisor has to be a number!")
+
+# try:
+#     print("%d / %d = %f" % (dividend, divisor, dividend/divisor))
+# except ZeroDivisionError:
+#     print("The dividend may not be zero!")
+
+print('------------------------------------------------ Error checks vs exception handling')
+
+# n = None
+# while n is None:
+#     s = input('Please enter an integer: ')
+#     if s.lstrip('-').isdigit():
+#         n = int(s)
+#     else:
+#         print('%s is not an integer.' % s)
+
+
+# # with exception handling
+
+# n = None
+# while n is None:
+#     try:
+#         s = input('Please enter an integer2: ')
+#         n = int(s)
+#     except ValueError:
+#         print('%s is not an integer2.' % s)
+
+
+print('------------------------------------------------ The else and finally statements')
+# The else and finally statements
+# There are two other clauses that we can add to a try-except block: else and finally. 
+# else will be executed only if the try clause doesn’t raise an exception:
+
 try:
     age = int(input("Please enter your age: "))
-    print("I see that you are %d years old." % age)
 except ValueError:
     print("Hey, that wasn't a number!")
+else:
+    print("I see that you are %d years old." % age)
+
+# When we edit this program in the future, we may introduce additional statements 
+# that should also be executed if the age input is successfully converted. Some of 
+# these statements may also potentially raise a ValueError. If we don’t notice this, 
+# and put them inside the try clause, the except clause will also handle these 
+# errors if they occur. This is likely to cause some odd and unexpected behaviour. 
+# By putting all this extra code in the else clause instead, we avoid taking this risk.
+
+# The finally clause will be executed at the end of the try-except block no matter 
+# what – if there is no exception, if an exception is raised and handled,
+# if an exception is raised and not handled, and even if we exit the block using break, 
+# continue or return. We can use the finally clause for cleanup code that we always 
+# want to be executed:
 
 try:
-    dividend = int(input("Please enter the dividend: "))
-    divisor = int(input("Please enter the divisor: "))
-    print("%d / %d = %f" % (dividend, divisor, dividend/divisor))
-except(ValueError, ZeroDivisionError):
-    print("Oops, something went wrong!")
+    age = int(input("Please enter your age2: "))
+except ValueError:
+    print("Hey, that wasn't a number!")
+else:
+    print("I see that you are %d years old." % age)
+finally:
+    print("It was really nice talking to you.  Goodbye!")
