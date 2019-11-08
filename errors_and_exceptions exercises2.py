@@ -98,8 +98,9 @@ print('------------------------------------------------ 2')
 def print_list_element(thelist, index):
     try:
         print(thelist[index])
-    except IndexError:
-        print('Index is greater than the length of the list')
+    except IndexError as err:
+        print('Index is greater than the length of the list. Your index is %s' % err)
+        raise err
 
 
 print('------------------------------------------------ 3')
